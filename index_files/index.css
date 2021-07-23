@@ -1,3 +1,9 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .icon-close {
     display: inline-block;
     width: 4px;
@@ -406,7 +412,7 @@ div {
     flex: 0 0 auto;
     width: 83px;
     height: 42px;
-    background: url("../assets/img/label.png") 50% 50% no-repeat;
+    background: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/label.png") 50% 50% no-repeat;
     background-size: contain;
     margin-right: 20px;
 }
@@ -569,7 +575,7 @@ div {
     left: 0;
     width: 83px;
     height: 42px;
-    background: url("../assets/img/label-mobile.png") 50% 50% no-repeat;
+    background: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/label-mobile.png") 50% 50% no-repeat;
     background-size: contain;
     z-index: 1;
 }
@@ -948,7 +954,7 @@ div {
 
 .equipment-catalog-item-slider-slide {
     display: none;
-    background: url("../assets/img/catalog-item-mobile.jpg") 50% 50% no-repeat;
+    background: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/catalog-item-mobile.jpg") 50% 50% no-repeat;
     background-size: contain;
     height: 160px;
 }
@@ -2088,28 +2094,26 @@ div {
 }
 
 .main-menu {
-    height: 100vw;
-    max-height: 1000px;
     margin-bottom: 25px;
 }
 
 @media screen and (min-width: 768px) {
     .main-menu {
-        height: calc(100vw - 100px);
         position: relative;
         margin-bottom: 55px;
     }
 }
 
 .main-menu-item {
+    float: left;
+    position: relative;
     display: flex;
-    position: absolute;
     flex: 0 0 auto;
     background: white;
     border-radius: 50%;
     flex: 0 0 auto;
-    width: 46.875vw;
-    height: 46.875vw;
+    width: 50%;
+    height: 50%;
     top: 0;
     left: 0;
     text-decoration: none;
@@ -2117,10 +2121,48 @@ div {
     box-shadow: 0px 0px 3px rgba(51, 51, 51, 0.4);
 }
 
+.main-menu-item:before {
+    content: ' ';
+    padding-top: 100%;
+}
+
+.main-menu-item.mod-item-1 {
+    z-index: 10;
+}
+.main-menu-item.mod-item-2 {
+    margin-left: -2%;
+    margin-top: 5%;
+}
+.main-menu-item.mod-item-3 {
+    transform: scale(1.05);
+    margin-top: -14%;
+    margin-left: 17%;
+    z-index: 11;
+}
+.main-menu-item.mod-item-4 {
+    margin-top: -36%;
+    margin-left: 55%;
+    z-index: 12;
+}
+.main-menu-item.mod-item-5 {
+    margin-top: -18%;
+    margin-left: 19%;
+}
+
 @media screen and (min-width: 768px) {
     .main-menu-item {
         max-width: 478px;
         max-height: 478px;
+    }
+    .main-menu-item.mod-item-3 {
+        margin-top: -12%;
+        margin-left: 15%;
+    }
+    .main-menu-item.mod-item-4 {
+        margin-left: 52%;
+    }
+    .main-menu-item.mod-item-5 {
+        margin-left: 12%;
     }
 }
 
@@ -2136,7 +2178,7 @@ div {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: url("../assets/img/circle-mobile-1.jpg") 50% 50% no-repeat;
+    background: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-mobile-1.jpg") 50% 50% no-repeat;
     background-size: cover;
     z-index: 2;
 }
@@ -2174,128 +2216,66 @@ div {
     }
 }
 
-.main-menu-item.mod-item-1 {
-    top: 0;
-    left: 2.1875vw;
-    z-index: 2;
-}
-
-@media screen and (min-width: 768px) {
-    .main-menu-item.mod-item-1 {
-        left: .8%;
-    }
-}
-
 .main-menu-item.mod-item-1 .main-menu-item-wrap {
     width: 91%;
     height: 91%;
     top: 6.667%;
     left: 6%;
-    background-image: url("../assets/img/circle-mobile-1.jpg");
+    background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-mobile-1.jpg");
 }
 
 @media screen and (min-width: 768px) {
     .main-menu-item.mod-item-1 .main-menu-item-wrap {
-        background-image: url("../assets/img/circle-1.jpg");
+        background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-1.jpg");
     }
 }
 
-.main-menu-item.mod-item-2 {
-    top: 4.6875vw;
-    left: 47.8125vw;
-    z-index: 1;
-}
 
-@media screen and (min-width: 768px) {
-    .main-menu-item.mod-item-2 {
-        top: 4.68%;
-        left: 46.6%;
-    }
-}
+
 
 .main-menu-item.mod-item-2 .main-menu-item-wrap {
     width: 91%;
     height: 91%;
     top: 6.667%;
     left: 6.667%;
-    background-image: url("../assets/img/circle-mobile-2.jpg");
+    background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-mobile-2.jpg");
 }
 
 @media screen and (min-width: 768px) {
     .main-menu-item.mod-item-2 .main-menu-item-wrap {
-        background-image: url("../assets/img/circle-2.jpg");
+        background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-2.jpg");
     }
 }
 
-.main-menu-item.mod-item-3 {
-    width: 51.25vw;
-    height: 51.25vw;
-    top: 38.4375vw;
-    left: 14.0625vw;
-    z-index: 3;
-}
 
-@media screen and (min-width: 768px) {
-    .main-menu-item.mod-item-3 {
-        max-width: 523px;
-        max-height: 523px;
-        top: 39.33%;
-        left: 12%;
-    }
-}
+
 
 .main-menu-item.mod-item-3 .main-menu-item-wrap {
     width: 83.2317%;
     height: 83.2317%;
     top: 6.7%;
     left: 7.317%;
-    background-image: url("../assets/img/circle-mobile-3.jpg");
+    background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-mobile-3.jpg");
 }
 
 @media screen and (min-width: 768px) {
     .main-menu-item.mod-item-3 .main-menu-item-wrap {
-        background-image: url("../assets/img/circle-3.jpg");
+        background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-3.jpg");
     }
 }
 
-.main-menu-item.mod-item-4 {
-    top: 51.5625vw;
-    left: 53.4375vw;
-    z-index: 4;
-}
 
-@media screen and (min-width: 768px) {
-    .main-menu-item.mod-item-4 {
-        top: 52.5%;
-        left: 52.1%;
-    }
-}
-.main-menu-item.mod-item-5 {
-    top: 85.5625vw;
-    left: 24.1875vw;
-    z-index: 1;
-}
-
-@media screen and (min-width: 768px) {
-    .main-menu-item.mod-item-5 {
-        top: 85%;
-        left: 10.8%;
-    }
-}
-.main-menu {
-    margin-bottom: 350px;
-}
 .main-menu-item.mod-item-4 .main-menu-item-wrap {
     width: 91%;
     height: 91%;
     top: 2.667%;
     left: 2.667%;
-    background-image: url("../assets/img/circle-mobile-4.jpg");
+    background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-mobile-4.jpg");
 }
 
 @media screen and (min-width: 768px) {
     .main-menu-item.mod-item-4 .main-menu-item-wrap {
-        background-image: url("../assets/img/circle-4.jpg");
+        background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-4.jpg");
     }
 }
 
@@ -2327,7 +2307,7 @@ div {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: url("../assets/img/circle-decor-mobile-1.png") 50% 50% no-repeat;
+    background: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-decor-mobile-1.png") 50% 50% no-repeat;
     background-size: cover;
     z-index: 3;
 }
@@ -2351,7 +2331,7 @@ div {
 
 @media screen and (min-width: 768px) {
     .main-menu-decor.mod-decor-1 .main-menu-decor-wrap {
-        background-image: url("../assets/img/circle-decor-1.png");
+        background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-decor-1.png");
     }
 }
 
@@ -2370,13 +2350,13 @@ div {
 .main-menu-decor.mod-decor-2 .main-menu-decor-wrap {
     top: 3.54%;
     left: 10.6%;
-    background: url("../assets/img/circle-decor-mobile-2.png") 50% 50% no-repeat;
+    background: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-decor-mobile-2.png") 50% 50% no-repeat;
     background-size: cover;
 }
 
 @media screen and (min-width: 768px) {
     .main-menu-decor.mod-decor-2 .main-menu-decor-wrap {
-        background-image: url("../assets/img/circle-decor-2.png");
+        background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-decor-2.png");
     }
 }
 
@@ -2397,13 +2377,13 @@ div {
 .main-menu-decor.mod-decor-3 .main-menu-decor-wrap {
     top: 10.6%;
     left: 6.64%;
-    background: url("../assets/img/circle-decor-mobile-3.png") 50% 50% no-repeat;
+    background: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-decor-mobile-3.png") 50% 50% no-repeat;
     background-size: cover;
 }
 
 @media screen and (min-width: 768px) {
     .main-menu-decor.mod-decor-3 .main-menu-decor-wrap {
-        background-image: url("../assets/img/circle-decor-3.png");
+        background-image: url("https://e-cat.chernogolovka.com/bitrix/templates/ecatalog/assets/img/circle-decor-3.png");
     }
 }
 
